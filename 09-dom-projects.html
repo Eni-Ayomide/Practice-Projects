@@ -20,14 +20,36 @@
     <p>
       Amazon Shipping Calculator
     </p>
-    <input placeholder = "Cost Of Order">
-    <Button>
+    <input class ="js-costinput" placeholder = "Cost Of Order">
+    <Button onclick="
+    calculatetotal()
+    
+    ">
       Calculate
     </Button>
+
+    <p>
+      class = 'js-totalcost'
+    </p>
 
 
 
     <script>
+
+      function calculatetotal(){
+
+        const cost = document.querySelector('.js-costinput')
+
+       costvalue = cost.value;
+
+       if(costvalue < 40){
+        costvalue+=10;
+       }
+
+       document.querySelector('.js-totalcost')
+      }
+
+
 
       function subscribe(){
         const buttonElement = document.querySelector('.js-subscribe-button');
