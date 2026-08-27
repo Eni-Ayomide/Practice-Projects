@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Functions practice
+    </title>
+  </head>
+
+  <body>
+
+    <script>
+      /*
+      function greet(name){
+        if (!name){
+          console.log('Hello Mr');
+        }
+        else{
+        console.log(`Hello ${name}`);
+      }
+    }
+      greet();*/
+
+
+      function convertToFahrenheit(celsius){
+        return (celsius *9/5) +32;
+      }
+
+      function convertToCelsius(fahrenheit){
+        return (fahrenheit - 32)*5/9
+      }
+
+      function convertTemperature(degrees, unit){
+        if (unit === 'C'){
+          result = convertToFahrenheit(degrees)
+          console.log(`${degrees} To Fahrenheit is ${result}`)
+
+      }
+      else if (unit ==='F'){
+        result = convertToCelsius(degrees)
+        console.log(`${degrees} to Celsius is ${result}`)
+      }
+    }
+    convertTemperature(300, 'F')
+
+    </script>
+  </body>
+</html>

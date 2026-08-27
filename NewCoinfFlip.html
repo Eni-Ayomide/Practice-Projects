@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Upgraded Coin FLip
+    </title>
+  </head>
+  <body>
+
+
+    <button onclick="
+      player_pick = 'Heads'
+      
+        
+    if(comp_ans === player_pick ){
+      console.log('You win')
+    }
+    else{
+      console.log('You lose')
+    }
+    console.log(comp_ans)
+      
+      
+      ">
+      Heads
+    </button >
+
+    <button onclick="
+    player_pick = 'Tails'
+    
+    if(comp_ans === player_pick ){
+      console.log('You win')
+    }
+    else{
+      console.log('You lose')
+    }
+    console.log(comp_ans)
+    ">
+      Tails
+    </button>
+
+    <script>
+      comp_pick = Math.random();
+      comp_ans = ''
+      if(comp_pick < 1/3){
+        comp_ans = 'Heads'
+      }
+      else if (comp_pick > 1/3 && comp_pick <2/3){
+        comp_ans = 'Tails'
+      }
+
+    </script>
+
+  </body>
+</html>
