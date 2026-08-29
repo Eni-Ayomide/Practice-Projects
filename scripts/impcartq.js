@@ -1,0 +1,1 @@
+  cartQuantity = 0;
