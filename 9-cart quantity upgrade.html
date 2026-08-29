@@ -34,44 +34,52 @@
 
 
     <button onclick="let maxQuantity =(cartQuantity>=10) ? console.log('Max quantity') : cartQuantity += 4;
-    console.log(`Cart Quantity: ${cartQuantity}`)">
+    document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`">
       +4
     </button>
 
 
     <button onclick="
-      console.log(`Cart Quantity: ${cartQuantity}`);
+      document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`;
       ">
       Show Quantity
     </button>
 
     <button onclick=" let maxquantit = (cartQuantity>=10) ? console.log('Max Quantity') : cartQuantity +=1;
 
-    console.log(`Cart Quantity: ${cartQuantity}`);
+    document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`;
     ">
       Add to cart
     </button>
 
     <button onclick=" maxquanti = (cartQuantity>=10) ? console.log('Max Quantity') : cartQuantity+=2;
-    console.log(`Cart Quantity: ${cartQuantity}`);
+    document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`
     ">
       +2
     </button>
 
     <button onclick="
     maxq = (cartQuantity>= 10) ? console.log('Max Quantity') : cartQuantity +=3;
-    console.log(`Cart Quantity: ${cartQuantity}`);">
+    document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`">
       +3
     </button>
 
     <button onclick="
     cartQuantity=cartQuantity-cartQuantity;
-    console.log(`Cart Quantity: ${cartQuantity}`);">
+    cq() ">
       Reset Cart
     </button>
 
+    <p class="cartq">
+      Cart Quantity:0
+    </p>
+
     <script>
       cartQuantity = 0;
+
+      function cq(){
+        document.querySelector('.cartq').innerText = `Cart Quantity: ${cartQuantity}`
+      }
 
     </script>
 
