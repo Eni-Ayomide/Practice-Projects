@@ -20,20 +20,30 @@
 
     <br>
     <br>
-    <button>
+    <button class ="headc" onclick="responsechanger()">
       Heads
     </button>
 
-    <button>
+    <button class = "headc" onclick="responsechanger(this)">
       Tails
     </button>
 
-
+    <p class = "response"> Hello</p>
 
     <script>
-      console.log(document.querySelector('button'));
+      let button = document.querySelector(".headc")
 
-      console.log(document.querySelector('.button2').innerHTML = '9b done');
+      function responsechanger(button){
+        
+        if(button.innerText === 'Heads'){
+          document.querySelector(".response").innerText = "You Chose: Heads";
+        }
+        else if(button.innerText === 'Tails'){
+          document.querySelector(".response").innerText = "You Chose: Tails";
+        }
+
+
+      }
     </script>
   </body>
 </html>

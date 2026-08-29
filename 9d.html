@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      9d-9f
+    </title>
+  </head>
+
+  <body>
+
+    <input placeholder="Name" class="nameput" onkeydown="
+      keydecider(event)
+      ">
+    <button class="sbutton"  
+    onclick=" responder()
+    
+    ">
+      Submit
+    </button> 
+    <p class = "response"></p>
+    
+    <script>
+
+      let nameInput = document.querySelector(".nameput")
+      
+      function keydecider(event){
+        if (event.key === "Enter"){
+          document.querySelector('.response').innerText = `Your name is ${nameInput.value}`;
+        }
+        else{
+          console.log('typing')
+        }
+
+      }
+
+      function responder (){
+     
+
+     document.querySelector('.response').innerText = `Your name is ${nameInput.value}`;
+      }
+
+    </script>
+  </body>
+</html>
