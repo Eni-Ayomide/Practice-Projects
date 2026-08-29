@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+body{
+  font-family:Arial;
+  font-weight:bold;
+}
+.subscribe-button{
+        border:none;
+        background-color:red;
+        border-radius:50px;
+        height:30px;
+        width:100px;
+        color:white;
+        padding-top:10px;
+        padding-bottom:25px;
+        padding-left:10px;
+        padding-right:10px;
+        font-weight:bold;
+        cursor:pointer;
+        margin-bottom:50px;
+}
+.is-subscribed{
+        border:none;
+        background-color:aliceblue;
+        border-radius:50px;
+        height:30px;
+        width:100px;
+        color:black;
+        padding-top:10px;
+        padding-bottom:25px;
+        padding-left:10px;
+        padding-right:10px;
+        font-weight:bold;
+        cursor:pointer;
+        }
+.cost-input{
+  font-size:15px;
+ /*
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  padding-right:10px;
+  */
+
+  padding:10px;
+}
+.calculate-button{
+  color:white;
+  background-color:green;
+  padding:13px 20px;
+  border:none;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+    </style>
+    <title>
+      DOM projects
+    </title>
+  </head>
+  <body>
+
+    <p>
+      YouTube Subscribe Button
+    </p>
+
+    <button class="js-subscribe-button subscribe-button"
+    
+    onclick="
+      subscribe()
+    ">Subscribe</button>
+
+    <p>
+      Amazon Shipping Calculator
+    </p>
+    <input onkeydown ="
+    handlecostkeydown(event)
+  
+    "
+    
+    class ="js-costinput cost-input" placeholder = "Cost Of Order">
+    <Button onclick="
+    calculatetotal()
+    
+    "
+    class="calculate-button">
+      Calculate
+    </Button>
+
+    <p class = 'js-totalcost'>
+      
+    </p>
+
+
+
+    <script>
+
+      String(67)
+      console.log('25' - 5);
+      console.log("25" + 5);
+
+
+      window.console.log('Hi')
+      window.document
+
+
+function handlecostkeydown(event){
+    console.log('typing');
+    console.log(event.key);
+
+    if(event.key === 'Enter'){
+      calculatetotal();
+    }
+    
+}
+
+      function calculatetotal(){
+
+        const cost = document.querySelector('.js-costinput')
+
+       let costvalue = Number (cost.value);
+
+       if(costvalue < 40){
+        costvalue+=10;
+       }
+
+       document.querySelector('.js-totalcost')
+       .innerHTML = `$${costvalue}`;
+      }
+
+
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if (buttonElement.innerText === 'Subscribe'){
+
+        buttonElement.innerText = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+      }
+      else{
+        buttonElement.innerText = 'Subscribe'
+        buttonElement.classList.remove('is-subscribed');
+      }
+      }
+
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      body{
+        background-color:rgb(25, 25, 25);
+        color:white;
+        font-weight:bold;
+        font-family:arial;
+      }
+      .title{
+        font-size:30px;
+
+      }
+
+      .move-icon{
+        height:140px;
+      }
+
+      .move-button{
+        background-color:transparent;
+        border:3px, solid, white;
+        width:200px;
+        height : 200px;
+        border-radius: 100px;
+        margin-right:10px;
+        cursor:pointer;
+      }
+      .result{
+        font-size:25px;
+        font-weight:bold;
+        Margin-top:50px;
+      }
+      .score{
+        margin-top:60px;
+      }
+      .reset-score{
+        background-color:white;
+        border:none;
+        border-radius:70px;
+        font-size:20px;
+        font-weight:bold;
+        padding:10px 15px;
+        cursor:pointer;
+      }
+    </style>
+    <title>
+      Rock Paper Scissors
+    </title>
+  </head>
+
+  <body>
+    <p class = "title">Rock Paper scissors</p>
+
+
+    <button class = 'move-button' onclick="
+    playermove ='rock';
+    compareResult(playermove);
+    ">
+    <img src="images/rock-emoji.png" class="move-icon">
+    </button>
+
+    <button class = 'move-button' onclick="
+    playermove = 'paper';
+    compareResult(playermove);
+    "><img src="images/paper-emoji.png" class="move-icon">
+    </button>
+
+    <button  class = 'move-button' onclick="
+    playermove = 'scissors';
+    compareResult(playermove)
+    "><img src="images/scissors-emoji.png" class="move-icon">
+    </button>
+
+        <p class="js-result result"></p>
+
+
+     
+    </p>
+
+    <p class ="js-moves">
+      </p>
+
+      <p class="js-score score " ></p>
+
+    <button class="reset-score" onclick="
+    score.Wins = 0;
+    score.losses = 0;
+    score.Ties = 0;
+    localStorage.removeItem('score');
+    updatescoreElement();
+    ">
+      Reset Score
+    </button>
+
+
+    <script>
+    
+      let score = JSON.parse(localStorage.getItem('score')) || {
+          Wins:0,
+          losses:0,
+          Ties:0};
+
+
+      console.log(JSON.parse(localStorage.getItem('score')));
+
+
+      function computerGuess(){
+        rand = Math.random();
+
+        if(rand>=0 && rand <=1/3){
+          compguess = 'rock';
+        }
+        else if(rand >1/3 && rand <=2/3){
+          compguess = 'paper';
+        }
+        else if(rand >2/3 && rand <=1){
+          compguess = 'scissors';
+        }
+        return compguess;
+      }
+      function compareResult(playermove){
+
+        c_guess = computerGuess();
+
+        if(playermove === 'rock'){
+
+          
+          if(c_guess === 'rock'){
+            result = 'tie'
+          }
+          else if(c_guess === 'paper'){
+            result = 'you lose'
+          }
+          else if(c_guess === 'scissors'){
+            result = 'you win'
+          }
+        }
+      else if(playermove === 'paper'){
+        if(c_guess === 'rock'){
+          result = 'you win'
+        }
+        else if(c_guess === 'paper'){
+          result = 'tie'
+        }
+        else if(c_guess === 'scissors'){
+          result = 'you lose'
+        }
+      }
+      else if(playermove === 'scissors'){
+        if(c_guess === 'rock'){
+          result = 'you lose'
+        }
+        else if(c_guess === 'paper'){
+          result = 'you win'
+        }
+        else if(c_guess === 'scissors'){
+          result = 'tie'
+        }
+      }
+
+      if(result === 'you win'){
+        score.Wins++;
+      }
+      else if(result === 'you lose'){
+        score.losses++;
+      }
+      else if(result === 'tie'){
+        score.Ties++;
+      }
+      localStorage.setItem('score', JSON.stringify(score));
+      
+       document.querySelector('.js-result').innerHTML =result;
+
+
+      document.querySelector('.js-moves').innerHTML = `You 
+      <image class = 'move-icon' src="images/${playermove}-emoji.png">
+      <image class = 'move-icon' src="images/${c_guess}-emoji.png">Compter`;
+
+      updatescoreElement();
+      }
+
+      updatescoreElement();
+      
+
+       function updatescoreElement(){
+
+        document.querySelector('.js-score').innerHTML
+
+       = ` Wins: ${score.Wins}, losses: ${score.losses}, Ties: ${score.Ties}`;
+       }
+
+       
+       
+
+    </script>
+  </body>
+</html>
