@@ -1,0 +1,41 @@
+.cart{
+  border:none;
+  font-size:20px;
+  background-color: rgb(255, 216, 20);
+  border-radius:20px;
+  font-weight:bold;
+  padding-bottom:10px;
+  padding-top:10px;
+  padding-left:60px;
+  padding-right:60px;
+  margin:10px;
+  margin-left:70px
+}
+
+.request{
+  border:none;
+  font-size:20px;
+  color:white;
+  background-color:black;
+  border-radius:10px;
+  font-weight:bold;
+  padding-left:20px;
+  padding-right:20px;
+   padding-top:10px;
+    padding-bottom:10px;
+    margin-right:10px;
+    
+}
+
+.schedule{
+  border:none;
+  font-size:20px;
+  color:black;
+  background-color:rgb(230, 230, 230);
+  border-radius:10px;
+  font-weight:bold;
+  padding-left:20px;
+  padding-right:20px;
+   padding-top:10px;
+    padding-bottom:10px;
+}
