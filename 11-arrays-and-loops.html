@@ -105,7 +105,7 @@ function getLastValue(array){
 */
 
 
-const testarray =[-10, 20, 30, -40, 50];
+const testarray =[-10, 20, -30, 40, 50];
 
 const testarray2 =[5, 10, 15, 30, 35];
 invertedarray = [];
@@ -169,6 +169,28 @@ function countpositive(nums){
 }
 
 countpositive(testarray)
+
+mincount = 0;
+maxcount =0;
+function minmax(nums){
+  for(let i=0; i<nums.length; i++){
+    
+    if(nums[i] >0){
+      maxcount++
+    }
+    else{
+      mincount++
+    }
+  }
+
+  resultdisplay ={
+    'Min':mincount,
+    'Max':maxcount
+  }
+  console.log(resultdisplay)
+}
+
+minmax(testarray)
 </script>
 </body>
 </html>
