@@ -234,18 +234,21 @@ let i =1;
 
   */
 
-const str = ['hello', 'world', 'search', 'good'];
+  const array = ['hello', 'world', 'search', 'good','potato', 'search'];
 
-for(let i = 0; i<str.length; i++){
-  let count = str[i];
-  if(str[i]==='search'){
-    console.log(i);
-    break;
+  function findindex(array, word){
+    
+  for(let i =0; i<array.length; i++){
+    if(array[i] === 'search'){
+      console.log(array.indexOf('search'));
+      break
+    }
+    else{
+      console.log('-1')
+    }
   }
-  else{
-    console.log(-1)
+
   }
-}
 </script>
 </body>
 </html>
