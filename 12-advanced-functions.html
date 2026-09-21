@@ -7,8 +7,29 @@
   </head>
   <body>
 
-
+<button class = 'startb' onclick="changer()">
+  Start
+</button>
     <script>
+      let intervalId;
+      
+function changer(){
+
+  intervalId = setInterval(function(){
+      const startelement = document.querySelector('.startb')
+
+      if(startelement.innerText === 'Start'){
+        startelement.innerText = 'Loading...'
+       
+      }
+      else if (startelement.innerText = 'Loading...'){
+        startelement.innerText ='Finished'
+      }
+    }, 1000
+  )
+  }
+  
+      /*
     function greeting(){
       console.log('hello');
     }   
@@ -37,12 +58,57 @@
     display(2)
 
     function run(param){
-
+      param()
     }
 
     run(function(){
       console.log('hello4')
     })
-    </script>
+      */
+
+/*
+    setTimeout(
+      function( ){
+      console.log('timeout');
+    },
+  3000);
+
+
+  console.log('next line')
+
+  setInterval(function(){
+    console.log('interval');
+},
+
+3000);
+
+console.log('nextline2')
+
+*/
+/*
+[
+  'make Dinner',
+  'wash dishes',
+  'watch youtube'
+].forEach(function(value, index){
+
+  if(value === 'wash dishes'){
+    return;
+  }
+  console.log(index)
+  console.log(value);
+});
+
+function funny(){console.log('12b')};
+
+function runTwice(fun){
+  fun();
+  fun();
+}
+
+runTwice(funny)
+
+*/
+</script>
   </body>
 </html>
