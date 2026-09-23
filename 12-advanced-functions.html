@@ -25,7 +25,28 @@
 <button onclick="messages-=1;">
   Remove
 </button>
+
+<button onclick="" class = "js-button">
+  Click
+</button>
     <script>
+
+      const buttonelement = document.querySelector('.js-button');
+
+
+      const eventlistener = ()=> {
+
+        console.log('clicked')
+      }
+
+      buttonelement.addEventListener('click', eventlistener);
+
+      buttonelement.removeEventListener('click',eventlistener )
+
+
+      buttonelement.addEventListener('click', ()=>{
+        console.log('clicked2')
+      })
       /*
       let intervalId;
       
@@ -130,7 +151,7 @@ function changer(){
 console.log('nextline2')
 
 */
-
+/*
 [
   'make Dinner',
   'wash dishes',
@@ -172,6 +193,16 @@ oneparam(2);
 const oneline = () => 2+3;
 
 console.log(oneline())
+
+
+const object2 ={
+  method: ()=>{},
+
+  method(){
+
+  }
+}
+*/
 </script>
   </body>
 </html>
