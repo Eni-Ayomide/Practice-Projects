@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
+    <title class="title">
       Advanced Functions
     </title>
   </head>
@@ -10,7 +10,23 @@
 <button class = 'startb' onclick="changer()">
   Start
 </button>
+<br>
+<br>
+<button onclick="Timesetter()">
+  Add to Cart
+</button>
+<p class="cartupdate">
+
+</p>
+
+<button onclick="messages+=1;">
+  Add
+</button>
+<button onclick="messages-=1;">
+  Remove
+</button>
     <script>
+      /*
       let intervalId;
       
 function changer(){
@@ -27,8 +43,37 @@ function changer(){
       }
     }, 1000
   )
-  }
+  }*/
+/*
+  let messages = 3;
+ let timeoutid;
+
+ function Timesetter(){
   
+    cart = document.querySelector('.cartupdate');
+    cart.innerText ='Added'
+ clearTimeout(timeoutid);
+ 
+    timeoutid = setTimeout(
+  function(){
+    cart.innerText=' '
+  },
+  2000);
+}
+
+
+  setInterval(function(){
+    if (messages === 0){document.title ='App'}
+    else{
+    if (document.title === 'Advanced Functions'){
+      document.title = `(${messages})New Messages`
+    }
+    else if(document.title === `(${messages})New Messages`){
+      document.title = 'Advanced Functions'
+    }
+  }
+}, 1000)
+*/
       /*
     function greeting(){
       console.log('hello');
@@ -85,12 +130,12 @@ function changer(){
 console.log('nextline2')
 
 */
-/*
+
 [
   'make Dinner',
   'wash dishes',
   'watch youtube'
-].forEach(function(value, index){
+].forEach((value, index) =>{
 
   if(value === 'wash dishes'){
     return;
@@ -108,7 +153,25 @@ function runTwice(fun){
 
 runTwice(funny)
 
-*/
+
+const regularfunction = function(){
+  console.log('hello')
+}
+
+const arrowfunction = () => {
+  console.log('hello');
+};
+
+arrowfunction();
+
+const oneparam =param =>{
+console.log(param +1);
+}
+oneparam(2);
+
+const oneline = () => 2+3;
+
+console.log(oneline())
 </script>
   </body>
 </html>

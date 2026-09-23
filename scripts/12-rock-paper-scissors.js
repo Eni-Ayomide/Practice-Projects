@@ -99,7 +99,7 @@
 function autoplay(){
   if(!isautoplaying){
    
-    intervalId = setInterval(function(){
+    intervalId = setInterval(() =>{
     const playermove = computerGuess()
     compareResult(playermove)
   },
