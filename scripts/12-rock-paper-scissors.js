@@ -1,3 +1,20 @@
+document.querySelector('.rock121')
+.addEventListener('click', () => {
+  playermove ='rock';
+    compareResult(playermove);
+})
+document.querySelector('.paper121')
+.addEventListener('click', () => {
+  playermove ='paper';
+    compareResult(playermove);
+})
+
+document.querySelector('.scissors121')
+.addEventListener('click', () => {
+  playermove ='scissors';
+    compareResult(playermove);
+})
+
 
       let score = JSON.parse(localStorage.getItem('score')) || {
           Wins:0,
