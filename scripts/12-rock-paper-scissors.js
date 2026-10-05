@@ -33,7 +33,7 @@ document.querySelector('.auplay')
 document.body
 .addEventListener('keydown', () => {
   console.log('keydown')
-});
+})
 
       let score = JSON.parse(localStorage.getItem('score')) || {
           Wins:0,
