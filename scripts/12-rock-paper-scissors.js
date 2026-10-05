@@ -30,7 +30,7 @@ document.querySelector('.auplay')
   autoplay();
 })
 
-document.bod
+document.body
 .addEventListener('keydown', () => {
   console.log('keydown')
 });
