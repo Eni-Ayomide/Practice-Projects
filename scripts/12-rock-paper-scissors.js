@@ -16,6 +16,25 @@ document.querySelector('.scissors121')
 })
 
 
+document.querySelector('.reset-score')
+.addEventListener('click', () => {
+  score.Wins = 0;
+    score.losses = 0;
+    score.Ties = 0;
+    localStorage.removeItem('score');
+    updatescoreElement();
+})
+
+document.querySelector('.auplay')
+.addEventListener('click', () => {
+  autoplay();
+})
+
+document.body
+.addEventListener('keydown', () => {
+  console.log('keydown')
+});
+
       let score = JSON.parse(localStorage.getItem('score')) || {
           Wins:0,
           losses:0,
