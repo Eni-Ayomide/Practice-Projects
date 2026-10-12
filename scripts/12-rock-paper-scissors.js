@@ -31,8 +31,19 @@ document.querySelector('.auplay')
 })
 
 document.body
-.addEventListener('keydown', () => {
-  console.log('keydown')
+.addEventListener('keydown', (event) => {
+  if(event.key === 'r'){
+     playermove ='rock';
+    compareResult(playermove);
+  }
+  else if (event.key === 'p'){
+     playermove ='paper';
+    compareResult(playermove);
+  }
+   else if (event.key === 's'){
+     playermove ='scissors';
+    compareResult(playermove);
+  }
 });
 
       let score = JSON.parse(localStorage.getItem('score')) || {
