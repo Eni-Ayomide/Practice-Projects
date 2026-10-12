@@ -1,11 +1,7 @@
-const todolist = [
-];
-
+const todolist = JSON.parse(localStorage.getItem('saveditem')) || [];
 rendertodolist()
-
 function rendertodolist(){
     let todolistHTML = '';
-
     todolist.forEach((todoObject, index)=>{
       //const name = todoObject.name;
       const {name, duedate}=todoObject;
@@ -60,9 +56,6 @@ function addtodo(){
     name, 
     duedate
   });
-
-  
-
-  inputvalue.value=' '
+  localStorage.setItem('saveditem', JSON.stringify(todolist));
 rendertodolist()
 }
