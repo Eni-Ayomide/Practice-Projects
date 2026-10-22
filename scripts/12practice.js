@@ -18,3 +18,6 @@ return array.map(value=>value*num)}
 console.log(addNum(array1, 2))
 */
 
+removeEgg = (list)=>{
+return 
+}
