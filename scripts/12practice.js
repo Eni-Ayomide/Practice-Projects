@@ -10,5 +10,11 @@ countPositive=(nums)=>{
 };
 console.log(countPositive(array1))
 
+
+array1= [2, 3, 1, 1]
+addNum = (array, num)=>{
+return array.map(value=>value*num)}
+
+console.log(addNum(array1, 2))
 */
 
