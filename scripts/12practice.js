@@ -18,6 +18,13 @@ return array.map(value=>value*num)}
 console.log(addNum(array1, 2))
 */
 
+array1= ['egg', 'fish','meat']
 removeEgg = (list)=>{
-return 
+return list.filter((value)=>{
+  if(value !== 'egg'){
+return false;
+  }
+})
 }
+
+console.log(removeEgg(array1))
